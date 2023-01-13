@@ -1,0 +1,255 @@
+
+.main .nav-main{
+    grid-row: 1/2;
+    background-color:#16161a;
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+     /*layout  */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 80px; */
+    z-index: 2; 
+}
+
+
+.main .nav-main .logo-container{
+   width: 100px;
+    
+}
+
+.logo-container img{
+    width: 50px;
+    /* margin-left: -60px;  */
+    border: 1px solid black;
+    border-radius: 50px;   
+}
+
+.main  .nav-main .helpicon .helper{
+    display: none;
+    font-size: 40px;
+}
+
+.main .nav-main .nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:500px;
+}
+
+.nav-main .nav-container li{
+     margin-left: 30px; 
+    font-size: 10px;
+    font-family: 'Press Start 2P';
+}
+
+
+.nav-main .nav-container  li a{
+    color: white;
+    font-family: 'Press Start 2P';
+}
+
+.nav-main .btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   gap: 30px; 
+}
+
+.nav-main .btn-container .button{
+  border: 1px solid transparent;
+  height: 30px ;
+  width: 120px;
+  background-color:  #7f5af0;
+  color: white;
+  /* align-items: center;
+  justify-content: center;
+  display: flex; */
+  border-radius: 16px;
+  /* margin-right: 70px;
+  margin-left: 100px; */
+  
+}
+.nav-main .btn-container .button a{
+  color: white;
+  font-size: 8px ;
+  font-family: 'Press Start 2P';
+
+}
+
+.nav-main .button:hover {
+  background-color: #734aed;
+  cursor: pointer;
+}
+
+
+.nav-container  li a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: 10px;
+    background: #7f5af0;
+    transform: scale(0,1);
+    transition: transform 200ms ease-in;
+  }
+  .nav-container  li a:hover::after{
+    
+    transform: scale(1,1)
+  }
+
+  .nav-main .btn-container .admin-icon{
+    font-size: 30px;
+   
+  }
+  .nav-main .btn-container .admin-icon i{
+    color: #7f5af0;
+  }
+
+   
+  @media (max-width: 990px) and (min-width:769px){
+   
+    .main .nav-main{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+ 
+    /* .nav-main .nav-section{
+   
+  } */
+  .main .nav-main .helpicon .helper{
+    display: block;
+    margin-right: -30px;
+  }
+  .nav-main .btn-container{
+    display: none;
+  }
+  .main .nav-main .nav-container{
+    position: fixed;
+    width: 100vh;
+    height: 120px;
+    margin: 0;
+    background:#16161a;
+    margin-left: -100px;
+  }
+
+  .main .nav-container.hide{
+    top: -200px;
+  }
+
+  .main .nav-container.show{
+    transition: top 1s;
+  }
+
+  .main .nav-main .logo-container img{
+    width: 70px;
+  }
+
+  
+
+
+  /* hero */
+  
+
+  
+  
+}
+/* large mobile */
+@media (max-width: 768px) and (min-width:577px){
+     
+    .main .nav-main{
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;   
+    }
+ 
+    /* .nav-main .nav-section{
+   
+  } */
+  .main .nav-main .helpicon .helper{
+    display: block;
+    margin-right: -30px;
+  }
+  .nav-main .btn-container{
+    display: none;
+  }
+  .main .nav-main .nav-container{
+    position: fixed;
+    width: 100vh;
+    height: 120px;
+    margin: 0;
+    background:#16161a;
+    margin-left: -100px;
+  }
+
+  .main .nav-container.hide{
+    top: -200px;
+  }
+
+  .main .nav-container.show{
+    transition: top 1s;
+  }
+
+  .main .nav-main .logo-container img{
+    width: 70px;
+  }
+
+  
+
+
+
+}
+
+/* mobile */
+@media (max-width: 576px){
+   
+    .main .nav-main{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 50px;  
+    }
+ 
+    /* .nav-main .nav-section{
+   
+  } */
+  .main .nav-main .helpicon .helper{
+    display: block;
+    margin-right: -30px;
+  }
+  .nav-main .btn-container{
+    display: none;
+  }
+  .main .nav-main .nav-container{
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    background:#16161a;
+    margin-left: -100px;
+  }
+
+
+  .main .nav-container.hide{
+    top: -200px;
+  }
+
+  .main .nav-container.show{
+    transition: top 1s;
+  }
+
+  .main .nav-main .logo-container img{
+    width: 70px;
+  }
+
+  
+
+}
+
+
+  
+
+
+
+  

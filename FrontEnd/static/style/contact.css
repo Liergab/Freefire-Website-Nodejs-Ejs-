@@ -1,0 +1,260 @@
+.main .contact-section{
+    /* width: 100vw; */
+    background:#242629;
+    grid-row: 5/6;
+
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 150px 1fr;
+    justify-content: center;
+    font-family: 'Play', sans-serif;
+}
+
+.main .contact-section .space3{
+    grid-row: 1/2;
+} 
+
+.main .contact-section .contact-container {
+    grid-row: 2/3;
+
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.main .contact-section .contact-container .contact-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.main .contact-section .contact-container .contact-left .contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.main .contact-section .contact-container .contact-left .contact-content h1{
+    font-family:  'Press Start 2P' ;
+    font-size: 20px;
+}
+.main .contact-section .contact-container .contact-left .contact-content p{
+    font-size: 20px;
+    color: #94a1b2;
+}
+
+.main .contact-section .contact-container .contact-left .contact-img-container img{
+    width: 500px;
+    margin-bottom: 100px;
+}
+
+.main .contact-section .contact-container .contact-right  {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-items: center;
+ gap: 30px;
+}
+
+.main .contact-section .contact-container .contact-right input{
+    height: 40px;
+    width: 300px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #242629;
+    font-size: 20px;
+}
+
+.main .contact-section .contact-container .contact-right input::placeholder{
+   margin-left: 30px;
+   font-size: 20px;
+   font-weight: 500;
+   color: #94a1b2;
+}
+
+.main .contact-section .contact-container .contact-right textarea{
+    width: 300px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.main .contact-section .contact-container .contact-right .contact-btn{
+    height: 40px;
+    width: 300px;
+    background-color: #7f5af0;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 20px;
+
+}
+
+.main .contact-section .contact-container .contact-right .contact-btn:hover{
+    background: #683dea ;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 990px) and (min-width:769px){
+
+    .main .contact-section{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 150px 1fr;
+        justify-content: center;
+        font-family: 'Play', sans-serif;
+    }
+
+    
+.main .contact-section .contact-container {
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.main .contact-section .contact-container .contact-left{
+    grid-row: 1/2;
+}
+
+.main .contact-section .contact-container .contact-right  {
+    grid-row: 2/3;
+   }
+
+   
+}
+
+@media (max-width: 768px) and (min-width:577px){
+
+    .main .contact-section{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 150px 1fr;
+        justify-content: center;
+        font-family: 'Play', sans-serif;
+    }
+
+    
+.main .contact-section .contact-container {
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.main .contact-section .contact-container .contact-left{
+    grid-row: 1/2;
+}
+
+.main .contact-section .contact-container .contact-right  {
+    grid-row: 2/3;
+   }
+
+   
+.main .contact-section .contact-container .contact-left .contact-img-container img{
+    width: 500px;
+}
+
+
+}
+
+@media (max-width: 576px){
+
+    .main .contact-section{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 150px 1fr;
+        justify-content: center;
+        font-family: 'Play', sans-serif;
+    }
+
+    
+.main .contact-section .contact-container {
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.main .contact-section .contact-container .contact-left{
+    grid-row: 1/2;
+}
+
+.main .contact-section .contact-container .contact-right  {
+    grid-row: 2/3;
+   }
+
+   
+.main .contact-section .contact-container .contact-left .contact-content h1{
+    font-family:  'Press Start 2P' ;
+    font-size: 16px;
+}
+.main .contact-section .contact-container .contact-left .contact-content p{
+   padding: 20px;
+    font-size: 16px;
+    color: #94a1b2;
+}
+
+   .main .contact-section .contact-container .contact-left .contact-img-container img{
+    width: 300px;
+}
+
+
+.main .contact-section .contact-container .contact-right input{
+    height: 50px;
+    width: 400px;
+   
+}
+
+.main .contact-section .contact-container .contact-right textarea{
+    width: 400px;
+}
+
+.main .contact-section .contact-container .contact-right .contact-btn{
+    height: 40px;
+    width: 400px;
+
+}
+
+
+.main .contact-section .contact-container .contact-right  {
+    margin-bottom: 100px;
+   }
+
+   
+}
+
+
+
+
+
+
+
+
+ 
