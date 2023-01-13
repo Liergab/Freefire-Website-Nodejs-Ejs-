@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://kit.fontawesome.com/1781ced494.js" crossorigin="anonymous"></script>
+    
     <title>Freefire HomePage</title>
 </head>
 <body>
@@ -68,11 +69,15 @@
             <div class="collection-title">
                 <h1>Collections</h1>
             </div>
+             
+             
             <div class="collection-container">
+                 <% for(let value of colData) { %>
                 <div class="collection">
                     <div class="hover-details">
                         <div class="hover-content">
-                          <p>Total of 44 characters in the Free Fire game.  27 Male characters and 17 Female characters.</p>
+                          <p><%= value.colDescription %></p>
+                          
                         </div>
                         <div class="character-link">
                             <p>More</p>
@@ -85,7 +90,7 @@
                         <div class="character-img-container">
                             <img src="../static/Image/character1.webp" alt="">
                         </div>
-                        <h2>Character</h2>
+                        <h2><%= value.colTitle %></h2>
                      </div>
                      <div class="character-link">
                         <p>More</p>
@@ -95,7 +100,8 @@
                      </div>
 
                 </div>
-                <div class="collection">
+                <% } %>
+                <!-- <div class="collection">
                     <div class="hover-details">
                         <div class="hover-content">
                           <p>Free Fire weapons contain 9 categories, including melee weapons and grenades.</p>
@@ -220,7 +226,7 @@
                             <a href="#"><i class="fa-solid fa-plus"></i></a>
                         </div>
                      </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
