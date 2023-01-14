@@ -14,10 +14,11 @@ router.get('/home', (req,res) =>{
 })
 
 router.get('/retrieve', async (req, res , next) =>{
+ 
     try {
-        const colList = retrieve()
+        const colList = await retrieve();
         res.render('index.ejs',{
-            colData:colList
+        colData : colList
         })
 
         

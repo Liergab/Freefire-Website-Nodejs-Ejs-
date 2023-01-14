@@ -2,9 +2,9 @@ const connection = require('../db/dbConnection')
 
 const Crud = () => {
 
-    const retriveCollection = async (obj) => {
+    const retrieveCollection = async () => {
         try {
-            const query =` SELECT ${obj} FROM collection; `
+            const query =` SELECT * FROM collection; `
            const results = await connection(query)
 
             return results
@@ -66,7 +66,7 @@ const Crud = () => {
     }
 
  return {
-    retrieve:retriveCollection,
+    retrieve:retrieveCollection,
     create:createCollection,
     update:updateCollection,
     Delete:DeleteCollection
