@@ -9,8 +9,8 @@ const{
     Delete
 
 } = Crud()
-router.get('/home', (req,res) =>{
-    res.render("index.ejs")
+router.get('/admin', (req,res) =>{
+    res.render("admin.ejs")
 })
 
 router.get('/retrieve', async (req, res , next) =>{
