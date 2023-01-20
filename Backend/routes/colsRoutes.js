@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Crud = require('../services/CollectionCrud')
+const Login = require('../services/login')
 
 const{
     create,
@@ -9,16 +10,63 @@ const{
     Delete
 
 } = Crud()
-router.get('/admin', (req,res) =>{
-    res.render("admin.ejs")
+router.get('/admin', async(req,res) =>{
+   
+    try {
+        const colList = await retrieve();
+        res.render('admin.ejs',{
+        colData : colList
+        })
+
+        
+    } catch (error) {
+        console.log("retrive error:", error)
+        res.status(500).json({status:"retrieve error"})
+        
+    }
 })
+
+
+router.post('/home', async (req, res , next) =>{
+    const {userName, userPassword} = req.body
+    
+        if(userName && userPassword)
+        {
+        const Logs = await Login({userName, userPassword});
+        if(Logs.length > 0)
+            {
+                for(var count = 0; count < Logs.length; count++)
+                {
+                    if(Logs[count].userPassword == userPassword)
+                    {
+                        req.session.userId = Logs[count].userId;
+
+                        res.redirect("admin");
+                    }
+                    else
+                    {
+                        res.send('Incorrect Password');
+                    }
+                }
+            }
+            else
+            {
+                res.send('Incorrect Email Address');
+            }
+            res.end();
+        }else{
+            res.send('Please Enter Email Address and Password Details');
+            res.end();
+        }
+       
+ })
 
 router.get('/retrieve', async (req, res , next) =>{
  
     try {
         const colList = await retrieve();
         res.render('index.ejs',{
-        colData : colList
+        colData : colList, session:req.session
         })
 
         
@@ -81,3 +129,5 @@ router.get('/delete', async (req, res , next) =>{
 })
 
 module.exports = router
+
+// https://www.webslesson.info/2022/06/how-to-create-login-system-in-nodejs-express-with-mysql.html
